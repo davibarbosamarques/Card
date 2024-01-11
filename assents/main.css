@@ -5,6 +5,7 @@
     --white:#ffffff;
     --black:#0f0f0f;
     --blackescuro:black;
+    --blue: royalblue;
 }
 *{
     color: var(--fontColor);
@@ -13,7 +14,7 @@ body {
     font-family: monospace;
     background: var(--bg);
     
-    min-height: 100vh;
+    min-height: 96vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +29,7 @@ body {
     margin: 0px 4px 0px 4px;
 
     background-color: var(--colorcard);
+    padding: 2rem;
 }
 /* header{
     display: flex;
@@ -59,10 +61,12 @@ button{
 .img{
     display: flex;
     justify-content: center;
+    margin-right: 2rem;
 }
 .ft-minha{
     width: 10rem;
     border-radius: 50%;
+    border: 3px solid var(--corbordaft);
 }
 #redessociais{
     display: flex;
@@ -71,30 +75,37 @@ button{
 
     margin-top: 8px;
 }
-
+#redessociais img{
+    transition: transform 0.3s ease-in-out;
+}
+#redessociais img:hover{
+    transform: scale(1.2);
+}
 .sobremim p{
     font-size: 15px;
 }
-ul {
-    font-family: helvética;
+.teste{
+    display: flex;
+    padding-bottom: 1rem;
 }
-li {
-    list-style: circle;
+@media(max-width:715px){
+    .teste{
+        display: flex;
+        flex-direction: column;
+    }
+    #card{
+        padding: 0.5rem;
+    }
 }
-
-.list {
-    list-style: square;
-}
-
-
 .light-theme {
     --bg: var(--cinza);
     --fontColor: var(--black);
 
-    --btnBg: var(--black);
+    --btnBg: var(--white);
     --btnFontColor: var(--white);
 
     --colorcard:var(--cinzaescuro);
+    --corbordaft:var(--cinza);
 }
 .dark-theme {
     --bg: var(--black);
@@ -104,6 +115,7 @@ li {
     --btnFontColor: var(--black);
 
     --colorcard:var(--blackescuro);
+    --corbordaft:var(--green);
 }
 
 .btn{
@@ -117,5 +129,14 @@ li {
     
     color: var(--btnFontColor);
     background-color: var(--btnBg);
+
+    transition: transform 0.3s ease-in-out;
+
+    font-size: 20px;
 }
-.btn:focus{outline-style: none;}
+.btn:hover{
+    transform: scale(1.2);
+}
+.btn:focus{
+    outline-style: none;
+}
