@@ -1,0 +1,121 @@
+:root{
+    --green:#00FF00;
+    --cinza: grey;
+    --cinzaescuro:rgb(148, 143, 143);
+    --white:#ffffff;
+    --black:#0f0f0f;
+    --blackescuro:black;
+}
+*{
+    color: var(--fontColor);
+}
+body {
+    font-family: monospace;
+    background: var(--bg);
+    
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+#card{
+    width: 40rem;
+    min-width: 15rem;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 36px ;
+    margin: 0px 4px 0px 4px;
+
+    background-color: var(--colorcard);
+}
+/* header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.Parte-Superior {
+    text-align: center;
+    flex-grow: 1; /* Para ocupar o espaço disponível e centralizar */
+}
+
+.lateral {
+    display: flex;
+    align-items: center;
+}
+button{
+    cursor: pointer;
+}
+.Parte-Superior span{
+    font-size: 1.5rem;
+}
+.img{
+    display: flex;
+    justify-content: center;
+}
+.ft-minha{
+    width: 10rem;
+    border-radius: 50%;
+}
+#redessociais{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    margin-top: 8px;
+}
+
+.sobremim p{
+    font-size: 15px;
+}
+ul {
+    font-family: helvética;
+}
+li {
+    list-style: circle;
+}
+
+.list {
+    list-style: square;
+}
+
+
+.light-theme {
+    --bg: var(--cinza);
+    --fontColor: var(--black);
+
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+
+    --colorcard:var(--cinzaescuro);
+}
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+
+    --colorcard:var(--blackescuro);
+}
+
+.btn{
+    /* position: absolute;
+    top: 20px;
+    left: 250px; */
+    height: 50px; 
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+.btn:focus{outline-style: none;}
