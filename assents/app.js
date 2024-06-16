@@ -1,17 +1,17 @@
 'use strict';
 
-const switcher = document.querySelector('.btn')
+const switcher = document.querySelector('.btn');
 
-switcher.addEventListener('click', function(){
-    document.body.classList.toggle('dark-theme')
+switcher.addEventListener('click', function() {
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
 
     var className = document.body.className;
-    if(className == "light-theme"){
-        this.textContent = "🌑"
-    }
-    else{
-        this.textContent = "🌞"
+    if (className === "light-theme") {
+        this.innerHTML = `<i class="bi bi-toggle-off"></i>`;
+    } else {
+        this.innerHTML = `<i class="bi bi-toggle-on"></i>`;
     }
 
-   console.log('nome da classe atual: '+ className);
+    console.log('nome da classe atual: ' + className);
 });
